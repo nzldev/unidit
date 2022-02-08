@@ -1,22 +1,4 @@
-![Unidit WYSIWYG editor](https://raw.githubusercontent.com/nzldev/unidit/master/examples/assets/logo.png)
-
-# Unidit Editor 3
-
-An excellent WYSIWYG editor written in pure TypeScript without the use of additional libraries. Its file editor and image editor.
-
-[![Build Status](https://github.com/nzldev/unidit/workflows/Run%20tests/badge.svg)](https://github.com/nzldev/unidit/actions/workflows/tests.yml)
-[![npm version](https://badge.fury.io/js/unidit.svg)](https://badge.fury.io/js/unidit)
-[![npm](https://img.shields.io/npm/dm/unidit.svg)](https://www.npmjs.com/package/unidit)
-
--   [Demo and Official site](https://nazrul.dev/unidit/)
--   [PRO Version](https://nazrul.dev/unidit/pro/)
--   [Playground - play with options](https://nazrul.dev/unidit/play.html)
--   [Documentation](https://nazrul.dev/unidit/docs/)
--   [Download & Changes](https://github.com/nzldev/unidit/releases)
--   [Changelog](https://github.com/nzldev/unidit/blob/master/CHANGELOG.MD)
--   [Examples](https://xdan.github.io/unidit/examples/)
-
-## Get Started
+ ## Get Started
 
 ## How use
 
