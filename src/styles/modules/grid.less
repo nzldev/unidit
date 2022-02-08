@@ -1,0 +1,55 @@
+/*!
+ * Unidit Editor (https://nazrul.dev/packages/unidit/)
+ * Released under MIT see LICENSE.txt in the project root for license information.
+ * Copyright (c) 2021-2022 Nazrul Islam. All rights reserved. https://nazrul.dev
+ */
+
+@import (reference) '../variables';
+@import (reference) '../mixins';
+
+.unidit-grid {
+	display: flex;
+	width: 100%;
+
+	&.unidit-grid_column {
+		flex-direction: column;
+	}
+
+	@media (max-width: @screen-xs) {
+		&.unidit-grid_xs-column {
+			flex-direction: column;
+		}
+	}
+
+	[class*='unidit_col-'] {
+		flex: 1 1 auto;
+	}
+
+	.unidit_col- {
+		.loop(@counter, @max, @size: lg) when (@counter > 0) {
+			&@{size}-@{counter}-@{max} {
+				width: (100% / @max) * @counter;
+			}
+
+			.loop((@counter - 1), @max, @size);
+		}
+
+		.loop(5, 5);
+		.loop(4, 4);
+
+		@media (max-width: @screen-md) {
+			.loop(5, 5, md);
+			.loop(4, 4, md);
+		}
+
+		@media (max-width: @screen-sm) {
+			.loop(5, 5, sm);
+			.loop(4, 4, sm);
+		}
+
+		@media (max-width: @screen-xs) {
+			.loop(5, 5, xs);
+			.loop(4, 4, xs);
+		}
+	}
+}

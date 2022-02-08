@@ -1,0 +1,43 @@
+/*!
+ * Unidit Editor (https://nazrul.dev/packages/unidit/)
+ * Released under MIT see LICENSE.txt in the project root for license information.
+ * Copyright (c) 2021-2022 Nazrul Islam. All rights reserved. https://nazrul.dev
+ */
+
+@import (reference) '../../styles/variables';
+
+.unidit_fullsize-box_true {
+	position: static !important;
+	z-index: var(--z-index-full-size) !important;
+	overflow: visible !important;
+
+	html&,
+	body& {
+		overflow: hidden !important;
+		width: 0 !important;
+		height: 0 !important;
+	}
+
+	html& {
+		position: fixed !important;
+	}
+}
+
+.unidit_fullsize {
+	position: absolute;
+	z-index: var(--z-index-full-size);
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	max-width: none !important;
+
+	.toolbar {
+		width: 100% !important;
+	}
+
+	.unidit_editor,
+	.unidit__area {
+		height: 100%;
+	}
+}

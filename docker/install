@@ -1,0 +1,7 @@
+#!/bin/bash
+
+docker build -t unidit .
+
+docker run --rm -v $PWD/..:/app unidit bash -c "\
+    npm install \
+    && npm audit fix --force"

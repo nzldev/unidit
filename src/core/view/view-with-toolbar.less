@@ -1,0 +1,21 @@
+/*!
+ * Unidit Editor (https://nazrul.dev/packages/unidit/)
+ * Released under MIT see LICENSE.txt in the project root for license information.
+ * Copyright (c) 2021-2022 Nazrul Islam. All rights reserved. https://nazrul.dev
+ */
+
+@import (reference) '../../styles/variables';
+
+.unidit-toolbar {
+	&__box {
+		&:not(:empty) {
+			--color-background-default: var(--color-panel);
+
+			overflow: hidden;
+			border-bottom: 1px solid var(--color-border);
+			background-color: var(--color-panel);
+			border-radius: var(--border-radius-default)
+				var(--border-radius-default) 0 0;
+		}
+	}
+}

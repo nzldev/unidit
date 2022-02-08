@@ -1,0 +1,50 @@
+/*!
+ * Unidit Editor (https://nazrul.dev/packages/unidit/)
+ * Released under MIT see LICENSE.txt in the project root for license information.
+ * Copyright (c) 2021-2022 Nazrul Islam. All rights reserved. https://nazrul.dev
+ */
+
+@import (reference) '../mixins';
+
+.unidit-button-group {
+	display: flex;
+
+	input {
+		display: none;
+	}
+
+	button {
+		display: flex;
+		flex: 1;
+		justify-content: center;
+		text-align: center;
+
+		& + button {
+			margin-left: -1px;
+		}
+	}
+
+	input:first-child + button,
+	button:first-child {
+		border-right: 0;
+		border-bottom-right-radius: 0;
+		border-top-right-radius: 0;
+	}
+
+	input:last-child + button,
+	button:last-child {
+		border-left: 0;
+		border-bottom-left-radius: 0;
+		border-top-left-radius: 0;
+	}
+
+	input[type='checkbox'] {
+		&:not(:checked) + button + button {
+			.active();
+		}
+
+		&:checked + button {
+			.active();
+		}
+	}
+}

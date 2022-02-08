@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta
+			name="viewport"
+			content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"
+		/>
+		<meta http-equiv="X-UA-Compatible" content="ie=edge" />
+		<title>Unidit Test Document</title>
+		<link rel="stylesheet" href="./app.css" />
+		<link rel="stylesheet" href="./build/unidit.min.css" />
+		<script src="./build/unidit.js"></script>
+		<link rel="icon" href="https://nazrul.dev/unidit/pro/favicon.png"/>
+	</head>
+	<body>
+		<style>
+			#box {
+				padding: 100px;
+				margin: 20px;
+				position: relative;
+				height: 500px;
+			}
+
+			@media (max-width: 480px) {
+				#box {
+					padding: 0;
+				}
+			}
+		</style>
+		<div id="box">
+			<h1>Unidit Test Document</h1>
+			<textarea id="editor"></textarea>
+		</div>
+		<script>
+			const editor = Unidit.make('#editor' ,{
+				uploader: {
+					url: 'https://nazrul.dev/unidit/connector/index.php?action=fileUpload'
+				},
+				filebrowser: {
+					ajax: {
+						url: 'https://nazrul.dev/unidit/connector/index.php'
+					}
+				}
+			});
+		</script>
+	</body>
+</html>

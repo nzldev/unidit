@@ -1,0 +1,12 @@
+{
+    "name": "nzldev/unidit",
+    "description": "Awesome WYSIWYG editor and FileBrowser",
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Nazrul Islam",
+            "email": "nazrul.devs@gmail.com"
+        }
+    ]
+}

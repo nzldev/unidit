@@ -1,0 +1,33 @@
+{
+  "name": "unidit",
+  "description": "Unidit is awesome and usefully wysiwyg editor with filebrowser",
+  "main": [
+    "build/unidit.min.js",
+    "build/unidit.min.css"
+  ],
+  "authors": [
+    {
+      "name": "Nazrul Islam",
+      "email": "nazrul.devs@gmail.com",
+      "homepage": "http://nazrul.dev/contacts.html"
+    }
+  ],
+  "license": "MIT",
+  "keywords": [
+    "wysiwyg",
+    "jquery",
+    "editor",
+    "rich",
+    "unidit"
+  ],
+  "homepage": "http://nazrul.dev/pacakges/unidit/",
+  "ignore": [
+    "*",
+    "!build/",
+    "!build/*"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git://github.com:nzldev/unidit.git"
+  }
+}

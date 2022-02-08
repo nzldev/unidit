@@ -1,0 +1,161 @@
+/*!
+ * Unidit Editor (https://nazrul.dev/packages/unidit/)
+ * Released under MIT see LICENSE.txt in the project root for license information.
+ * Copyright (c) 2021-2022 Nazrul Islam. All rights reserved. https://nazrul.dev
+ */
+
+@import (reference) '../variables';
+
+.unidit-dialog_theme_dark,
+.unidit_theme_dark {
+	--color-border: #6b6b6b;
+
+	.unidit-toolbar-collection,
+	.unidit-toolbar-editor-collection {
+		&_mode_horizontal {
+			&:after {
+				background-color: var(--color-border);
+			}
+		}
+	}
+
+	&.unidit-container {
+		background-color: var(--dark_background_color);
+	}
+
+	&.unidit-container.unidit_disabled {
+		background-color: var(--dark_background_color);
+	}
+
+	&.unidit-container:not(.unidit_inline) .unidit-workplace {
+		border-color: var(--dark_background_color);
+	}
+
+	.unidit-popup {
+		&__content {
+			background: var(--dark_background_ligher);
+		}
+	}
+
+	.unidit-ui-button,
+	.unidit-toolbar-button {
+		&__text {
+			color: var(--dark_text_color);
+		}
+
+		&,
+		&__button,
+		&__trigger {
+			&:hover:not([disabled]) {
+				background-color: var(--dark_background_ligher);
+			}
+		}
+	}
+
+	.unidit-status-bar {
+		border-color: rgba(95, 92, 92, 0.8);
+		background-color: rgba(95, 92, 92, 0.8);
+		color: var(--dark_text_color);
+
+		a.unidit-status-bar-link {
+			&,
+			&:hover,
+			&:visited {
+				color: var(--dark_text_color);
+			}
+		}
+
+		&,
+		.unidit-status-bar__item a,
+		.unidit-status-bar__item span {
+			color: var(--dark_text_color);
+		}
+	}
+
+	.unidit-toolbar__box:not(:empty) {
+		background: var(--dark_toolbar_color);
+	}
+
+	.unidit__upload-button svg,
+	.unidit-toolbar-button .unidit-toolbar-button__trigger,
+	.unidit-icon {
+		fill: var(--dark_icon_color);
+		stroke: var(--dark_icon_color);
+	}
+
+	.unidit-icon-close {
+		stroke: var(--dark_icon_color);
+	}
+
+	.unidit-wysiwyg_iframe,
+	.unidit-wysiwyg {
+		background-color: var(--dark_background_color);
+		color: var(--dark_text_color);
+	}
+
+	.unidit-form textarea,
+	.unidit-form input[type='url'],
+	.unidit-form input[type='text'] {
+		border-color: var(--dark_toolbar_seperator_color2);
+		background-color: var(--dark_toolbar_seperator_color1);
+		color: var(--dark_text_color);
+	}
+
+	.unidit-form button {
+		background-color: var(--dark_toolbar_seperator_color3);
+		color: var(--dark_text_color);
+	}
+
+	.unidit-placeholder {
+		color: var(--dark_text_color_opacity80);
+	}
+
+	.unidit-drag-and-drop__file-box,
+	.unidit_uploadfile_button {
+		color: var(--dark_text_color);
+
+		&:hover {
+			background-color: var(--dark_toolbar_seperator_color3);
+		}
+	}
+
+	.unidit-add-new-line {
+		&::before {
+			border-top-color: var(--dark_toolbar_seperator_color2);
+		}
+
+		span {
+			border-color: var(--dark_toolbar_seperator_color2);
+			background: var(--dark_toolbar_seperator_color3);
+
+			svg {
+				fill: var(--dark_text_color);
+			}
+		}
+	}
+
+	.unidit-resizer > i {
+		border-color: var(--dark_icon_color);
+		background: var(--dark_toolbar_seperator_color3);
+	}
+
+	.unidit-select,
+	.unidit-input {
+		border-color: var(--dark_border_color);
+		background-color: var(--dark_background_ligher);
+		color: var(--dark_border_color);
+	}
+
+	&.unidit-dialog {
+		background-color: var(--dark_background_color);
+
+		.unidit-filebrowser__files.active .unidit-filebrowser__files-item,
+		.unidit-dialog__header {
+			border-color: var(--dark_border_color);
+		}
+
+		.unidit-filebrowser__files.active .unidit-filebrowser__files-item-info {
+			background-color: var(--dark_text_color);
+		}
+	}
+}

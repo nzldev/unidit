@@ -1,0 +1,82 @@
+/*!
+ * Unidit Editor (https://nazrul.dev/packages/unidit/)
+ * Released under MIT see LICENSE.txt in the project root for license information.
+ * Copyright (c) 2021-2022 Nazrul Islam. All rights reserved. https://nazrul.dev
+ */
+
+@import (reference) '../../styles/variables';
+
+.fontSource() {
+	font: 12px / normal 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas',
+		'source-code-pro', monospace;
+}
+
+.unidit-source {
+	position: relative;
+	display: none;
+	overflow: auto;
+	min-height: 100%;
+	flex: auto;
+	background-color: var(--color-source-area);
+
+	.unidit-source__mirror-fake {
+		min-height: 100%;
+	}
+
+	* {
+		.fontSource();
+	}
+}
+
+.unidit-container.unidit-source__mode {
+	.unidit-wysiwyg,
+	.unidit-wysiwyg_iframe {
+		display: none !important;
+	}
+
+	.unidit-source {
+		display: block !important;
+	}
+}
+
+.unidit-container.unidit_split_mode {
+	.unidit-workplace {
+		flex-direction: row;
+		flex-wrap: nowrap;
+	}
+
+	.unidit-wysiwyg,
+	.unidit-wysiwyg_iframe,
+	.unidit-source {
+		display: block !important;
+		width: 50%;
+		flex: 1;
+	}
+}
+
+.unidit-source__mirror {
+	z-index: 2;
+	overflow: auto;
+	width: 100%;
+	height: 100%;
+	min-height: 100%;
+	box-sizing: border-box;
+	padding: var(--padding-default);
+	border: 0;
+	margin: 0;
+	background: var(--color-source-area);
+	box-shadow: none;
+	color: #f0f0f0;
+	line-height: 1.5;
+	outline: none;
+	resize: none;
+	tab-size: 2em;
+
+	.fontSource();
+
+	white-space: pre-wrap;
+
+	&::selection {
+		background: var(--color-selection-area);
+	}
+}

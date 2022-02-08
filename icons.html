@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport"
+				content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>Unidit Test Document</title>
+	<link rel="stylesheet" href="./build/unidit.min.css">
+	<script src="./build/unidit.min.js"></script>
+</head>
+<body>
+	<div id="box"></div>
+<script>
+	const result = [];
+	for (const key in Unidit.modules.ToolbarIcon.icons) {
+		result.push(`<div class="item">
+			<div class="item-title">${key}</div>
+			<div class="item-icon">
+						${Unidit.modules.Icon.get(key)}
+			</div>
+		</div>`);
+	}
+	box.innerHTML = result.join('');
+</script>
+<style>
+	#box {
+		display: flex;
+		flex-wrap: wrap;
+	}
+	.item {
+		width: 30px;
+		margin: 5px;
+		border: 1px solid #ccc;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: space-between;
+	}
+	.item-title {
+		font-size: 8px;
+		word-break: break-all;
+	}
+	.item-icon {
+		width: 24px;
+		height: 24px;
+	}
+</style>
+</body>
+</html>

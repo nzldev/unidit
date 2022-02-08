@@ -1,0 +1,10 @@
+.idea/
+node_modules/
+yarn-error.log
+/test.html
+
+/fake.html
+
+.DS_Store
+.vs
+/types/
